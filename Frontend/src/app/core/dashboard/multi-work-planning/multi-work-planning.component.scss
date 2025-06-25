@@ -1,0 +1,211 @@
+.template-wrap {
+  .resource-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+
+    .doctor-image {
+      width: 5Opx; /* Adjust as needed */
+      height: 50px; /* Adjust as needed */
+      border-radius: 50%; /* Ensures rounded shape */
+      margin-right: 10px; /* Spacing between image and text */
+    }
+
+    .resource-name {
+      font-weight: bold; /* Make the name bold */
+    }
+
+    .resource-designation {
+      font-size: 0.8rem; /* Adjust font size as needed */
+      color: #666; /* Adjust color as needed */
+      margin-top: 61px;
+      margin-left: -101px;
+    }
+  }
+}
+.BB{
+  padding: 18px;
+}
+.checkbox-conge {
+  position: relative;
+  margin-left: 0px !important;
+  margin-top: 10px;
+
+  // Hide the input element
+  // Style for the <p> element
+  p {
+    cursor: pointer;
+    margin-top: -20px;
+    margin-left: 20px;
+
+  }
+
+  // When the <p> element is clicked, hide the input
+  p:hover + input,
+  p:focus + input {
+    display: none;
+  }
+}
+:root {
+  font-size: 20px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+body {
+  font: 1em/1.618 Inter, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 30px;
+  margin: 0;
+
+  color: #224;
+
+}
+
+.card {
+  width: 100%;
+  height: 100px;
+  padding: 35px;
+  background-color: white; /* Change background color to blue *//* Adjust box shadow color to blue */
+  backdrop-filter: blur(15px);
+}
+
+.Work-Plan {
+  // Styles for the Work-Plan class
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #163663;
+  margin-left: 488px;
+  margin-top: -20px;
+
+
+}
+.time{
+  margin-left: 45px;
+}
+.date-time{
+  margin-top: -120px;
+  margin-left: 960px;
+}
+.card-footer {
+  font-size: 0.65em;
+  color: #446;
+}
+.traffic-lights {
+  position: absolute;
+  top: 10px;
+  left: 400px;
+
+}
+.traffic-lights-green {
+  position: absolute;
+  top: 10px;
+  left: 550px;
+
+}
+.traffic-lights-green span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+.traffic-lights-yellow{
+  position: absolute;
+  top: 10px;
+  left: 690px;
+
+}
+.traffic-lights-yellow span{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+.subject{
+  margin-top: -24px;
+  margin-left: 20px;
+}
+.traffic-lights span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+.search-container{
+  margin-top: -130px;
+  margin-left: 900px;
+
+  width: 20% !important;
+}
+.Search{
+  width: 200px !important;
+}
+.red {
+  background-color: #FF0000; /* Red */
+}
+
+.yellow {
+  background-color: #ef9c28; /* Yellow */
+}
+
+.green {
+  background-color: #4cd964; /* Green */
+}
+
+.mat-icon{
+  color:#4cd964 !important;
+}
+
+.e-schedule .e-table-container {
+  display: inline-flex !important;
+  position: relative !important;
+  vertical-align: top !important;
+  
+}
+.e-schedule .e-month-view .e-content-table {
+  height: 100%;
+  overflow: scroll !important;
+}
+.Template-wrapper {
+  padding: -3px;
+  padding-left: 55px;
+  font-size: 14px;
+  font-weight: 500;
+  padding-right: 85px;
+  padding-bottom: 70px
+  // Apply background color based on subject
+
+}
+.e-btn.e-primary
+{
+  background: #e3165b;
+  border-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+.e-btn.save{
+  background: #163663 !important;
+  border-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}

@@ -1,0 +1,89 @@
+<div class="card">
+  <div class="traffic-lights">
+    <span class="red"></span>
+    <p class="subject">remote work</p>
+  </div>
+  <div class="traffic-lights-yellow">
+    <span class="yellow"></span>
+    <p class="subject">All leave types</p>
+  </div>
+  <div class="traffic-lights-green ">
+    <span class="green"></span>
+    <p class="subject">on site work</p>
+  </div >
+  <h3>Welcome {{gender}}.<strong>{{fullName}}</strong></h3>
+  <p class="Work-Plan"><strong>Work-Plans</strong></p>
+
+    <mat-form-field appearance="fill" class="search-container">
+      <mat-label>Search employee</mat-label>
+      <input matInput class="Search" placeholder="Search" [(ngModel)]="searchText" (input)="filterDoctors()">
+      <mat-icon matSuffix class="myIcon">search</mat-icon>
+    </mat-form-field>
+
+</div>
+
+<ejs-schedule #schedule cssClass='schedule-group-editing'  [selectedDate]="selectedDate" [views]="views"
+[eventSettings]='eventSettings' [group]='group' [showQuickInfo]='showQuickInfo' (actionBegin)="OnActionBegin($event)" (popupOpen)="onPopupOpen($event)" (actionBegin)="onActionBegin($event)">
+<ng-template #eventSettingsTemplate let-data>
+  <div class="Template-wrapper" [ngStyle]="{ 'background-color': getBackgroundColor(data.Subject) }">{{data.Subject}}</div>
+</ng-template>
+<e-resources>
+  <e-resource field="UserId" title="Doctor Name" name="Doctors"
+  [dataSource]="doctorDataSource"
+  textField='text' idField='id' colorField='color' designationField='designation'>
+  </e-resource>
+</e-resources>
+<ng-template #resourceHeaderTemplate let-data>
+  <div class='template-wrap'>
+      <div class="resource-details">
+        <button mat-icon-button (click)="ConfirmPlan(data.resourceData.id,data.resourceData.status)"  *ngIf="isshowcofrmation && !data.resourceData.status" >
+          <mat-icon>free_cancellation</mat-icon>
+        </button>
+          <div class="resource-name">
+              <img [src]="apiURL + '/' + data.resourceData.imageUrl" class="doctor-image" width="50" height="30">
+              {{ data.resourceData.fullName }}
+          </div>
+          <div class="resource-designation">{{ data.resourceData.poste }}</div>
+      </div>
+  </div>
+</ng-template>
+  <ng-template #editorTemplate let-data>
+    <table *ngIf="data !=undefined" class="custom-event-editor" width="100%" height="20%" cellpadding="3">
+        <tbody>
+
+            <tr>
+                <td class="e-textlabel">Mode :</td>
+                <td colspan="4">
+                <ejs-dropdownlist id='Subject'  class="e-field" data-name="Subject" placeholder='Choose mode'
+                [dataSource]='statusData' value="{{data.Subject}}">
+              </ejs-dropdownlist>
+                </td>
+            </tr>
+            <tr>
+                <td class="e-textlabel">Day :</td>
+                <td colspan="4">
+                <ejs-datetimepicker id="StartTime" disabled class="e-field" data-name="StartTime" format="M/dd/yy"
+                (change)="onDateChange($event)" [value]="startDateParser(data.startTime || data.StartTime)">
+              </ejs-datetimepicker>
+                </td>
+            </tr>
+            <tr *ngIf="isshowendTime">
+                <td class="e-textlabel">To</td>
+                <td colspan="4">
+                <ejs-datetimepicker id="EndTime" class="e-field" data-name="EndTime" format="M/dd/yy"
+                (change)="onDateChange($event)" [value]="endDateParser(data.endTime || data.EndTime)">
+              </ejs-datetimepicker>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</ng-template>
+<ng-template #editorFooterTemplate>
+  <div id="right-button">
+    <button id="Save" class="e-control e-btn save" data-ripple="true">Save</button>
+    <button id="Cancel" class="e-control e-btn e-primary" data-ripple="true">Cancel</button>
+  </div>
+</ng-template>
+
+</ejs-schedule>

@@ -1,0 +1,27 @@
+.confirm{
+  .material-icons {
+    color: #4cd964 !important;
+}
+
+}
+.refus{
+  .material-icons {
+    color: #e3165b !important;
+}
+
+}
+.mat-card-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 34;
+  object-fit: cover;
+  margin-top: 3px;
+}
+.di{
+  margin-left: 8px;
+  margin-top: 3px;
+}
+.di p {
+  margin-bottom: -6px; /* Adjust this value as needed */
+}

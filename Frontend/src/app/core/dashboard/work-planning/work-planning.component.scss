@@ -1,0 +1,151 @@
+:root {
+  font-size: 20px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+body {
+  font: 1em/1.618 Inter, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 30px;
+  margin: 0;
+
+  color: #224;
+
+}
+
+.card {
+  width: 100%;
+  height: 100px;
+  padding: 35px;
+  background-color: white; /* Change background color to blue *//* Adjust box shadow color to blue */
+  backdrop-filter: blur(15px);
+}
+
+.Work-Plan {
+  // Styles for the Work-Plan class
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #163663;
+  margin-left: 488px;
+  margin-top: -20px;
+
+
+}
+.mmdd{
+  margin-left: -20px;
+}
+.time{
+  margin-left: 45px;
+}
+.date-time{
+  margin-top: -120px;
+  margin-left: 955px;
+}
+.card-footer {
+  font-size: 0.65em;
+  color: #446;
+}
+.traffic-lights {
+  position: absolute;
+  top: 10px;
+  left: 400px;
+
+}
+.traffic-lights-green {
+  position: absolute;
+  top: 10px;
+  left: 540px;
+
+}
+.traffic-lights-green span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+.traffic-lights-yellow{
+  position: absolute;
+  top: 10px;
+  left: 670px;
+
+}
+.traffic-lights-yellow span{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+.subject{
+  margin-top: -24px;
+  margin-left: 20px;
+}
+.traffic-lights span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.red {
+  background-color: #FF0000; /* Red */
+}
+
+.yellow {
+  background-color: #ef9c28; /* Yellow */
+}
+
+.green {
+  background-color: #4cd964; /* Green */
+}
+
+.Template-wrapper {
+  padding: -3px;
+  padding-left: 29px;
+  font-size: 14px;
+  font-weight: 500;
+  padding-right: 105px;
+  padding-bottom: 70px
+  // Apply background color based on subject
+
+}
+.e-schedule .e-appointment-detalis
+{
+   padding: -80px !important;
+   height: 100% !important;
+}
+
+
+.e-btn.e-primary
+{
+  background: #e3165b;
+  border-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+.e-btn.save{
+  background: #163663 !important;
+  border-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+
